@@ -1,7 +1,11 @@
 function makeid(l) {
   // write your code here
-	const uuid = crypto.randomUUID()
-return uuid.slice(0, l)
+	chars = '1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm'
+id = ''
+for(let i=0; i<l; i++) {
+	id += chars.charAt(Math.floor(Math.random()*chars.length))
+}
+return id
 }
 
 // Do not change the code below.
